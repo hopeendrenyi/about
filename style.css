@@ -279,6 +279,10 @@ section {
   gap: 0.6rem;
 }
 .facts li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+/* On phones, long cards take a full row */
+@media (max-width: 640px) {
+  .facts li.wide { grid-column: 1 / -1; }
+}
 .facts li {
   display: flex;
   align-items: center;
