@@ -1419,24 +1419,25 @@ section {
 
 /* ---------- My Work: buttons + pop-up panels ---------- */
 .work-buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.6rem;
   margin: 0.25rem 0 2.5rem;
 }
 .work-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.55rem 1.1rem 0.55rem 0.55rem;
-  border-radius: 999px;
+  justify-content: center;
+  text-align: center;
+  min-height: 3.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
   border: 1px solid rgba(60, 69, 64, 0.08);
   background: var(--sage-pale);
   font-family: var(--serif);
   font-size: 1.05rem;
-  line-height: 1.2;
+  line-height: 1.25;
   color: var(--ink);
-  text-align: left;
   cursor: pointer;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
@@ -1446,16 +1447,6 @@ section {
   transform: translateY(-1px);
 }
 .work-btn:focus-visible { outline: 3px solid rgba(122, 145, 122, 0.4); outline-offset: 2px; }
-.work-btn-icon {
-  flex: none;
-  width: 2.1rem;
-  height: 2.1rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #fff;
-  font-size: 1.05rem;
-}
 
 .work-panel {
   border: 0;
@@ -1525,8 +1516,11 @@ section {
 .work-panel .carousel { margin: 0; }
 body.panel-open { overflow: hidden; }
 
+@media (max-width: 640px) {
+  .work-buttons { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+}
 @media (max-width: 480px) {
-  .work-btn { font-size: 0.98rem; }
+  .work-btn { font-size: 0.98rem; padding: 0.7rem 0.6rem; }
   .work-panel-inner { padding: 1.4rem 1rem 1.1rem; }
   .work-panel-head h3 { font-size: 1.3rem; }
 }
