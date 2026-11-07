@@ -94,6 +94,62 @@ section {
   50%      { transform: translateY(6px); }
 }
 
+/* ---------- A bit about me ---------- */
+.about { background: var(--cream); }
+.about .section-inner { text-align: center; }
+.hand-title {
+  font-family: var(--hand);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 3.6rem);
+  color: var(--mauve-deep);
+  letter-spacing: 0;
+  margin-bottom: 1.25rem;
+}
+.about p { max-width: 46ch; margin-left: auto; margin-right: auto; }
+.hand-accent {
+  font-family: var(--hand);
+  font-style: italic;
+  font-size: 1.45em;
+  line-height: 1;
+  color: var(--mauve-deep);
+}
+.hats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin: 1.5rem 0 2rem;
+}
+.hat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 3.6rem;
+  padding: 0.8rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(60, 69, 64, 0.08);
+  background: var(--sage-pale);
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.hat:hover {
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(60, 69, 64, 0.1);
+  transform: translateY(-1px);
+}
+.hat:focus-visible { outline: 3px solid rgba(122, 145, 122, 0.4); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .hats { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+}
+@media (max-width: 480px) {
+  .hat { font-size: 0.98rem; padding: 0.7rem 0.6rem; }
+}
+
 /* ---------- Contact ---------- */
 .contact {
   background: var(--sage-pale);
