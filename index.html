@@ -114,8 +114,18 @@
             <span class="work-panel-icon">🎭</span>
             <h3 id="work-performing-title">Performing Arts</h3>
           </div>
-          <!-- Performing Arts: add text here -->
-          <div class="work-text"></div>
+          <div class="work-text">
+            <p><a class="inline-link jump-link" href="#performing-resume">Jump to Resume</a></p>
+            <!-- Performing Arts: add more text here -->
+          </div>
+          <div class="work-resume" id="performing-resume">
+            <div class="work-resume-head">
+              <h4>Resume</h4>
+              <a class="inline-link" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
+            </div>
+            <iframe class="work-resume-frame" src="files/Hope-Endrenyi-Resume.pdf#navpanes=0&view=FitH" title="Hope Endrenyi resume" loading="lazy"></iframe>
+            <p class="work-resume-fallback">Can't see the resume? <a class="inline-link" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener">Open the PDF</a>.</p>
+          </div>
         </div>
       </dialog>
 
@@ -268,6 +278,14 @@
         panel.showModal();
         document.body.classList.add('panel-open');
         requestAnimationFrame(function () { window.dispatchEvent(new Event('resize')); });
+      });
+    });
+    document.querySelectorAll('.work-panel .jump-link').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
     document.querySelectorAll('.work-panel').forEach(function (panel) {

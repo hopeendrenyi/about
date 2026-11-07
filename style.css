@@ -1495,6 +1495,33 @@ section {
   font-size: 1.3rem;
 }
 .work-text:empty { display: none; }
+.work-text p { margin: 0 0 1rem; }
+.work-resume { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(60, 69, 64, 0.1); scroll-margin-top: 1rem; }
+.work-resume-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.work-resume-head h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--ink);
+}
+.work-resume-frame {
+  display: block;
+  width: 100%;
+  height: 75vh;
+  min-height: 420px;
+  border: 1px solid rgba(60, 69, 64, 0.1);
+  border-radius: 14px;
+  background: var(--cream);
+}
+.work-resume-fallback { margin: 0.75rem 0 0; font-size: 0.92rem; color: var(--ink-soft); }
 .work-text { margin-bottom: 1.25rem; }
 .work-close {
   position: absolute;
