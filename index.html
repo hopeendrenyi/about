@@ -12,12 +12,9 @@
 </head>
 <body>
 
-  <!-- Side dot navigation (one dot per section; more get added as sections arrive) -->
+  <!-- Side dot navigation (one dot per section) -->
   <nav class="dots" aria-label="Sections">
     <a href="#hero" class="dot is-active" aria-label="Top"></a>
-    <a href="#why" class="dot" aria-label="Why I made this site"></a>
-    <a href="#about" class="dot" aria-label="About me"></a>
-    <a href="#goals" class="dot" aria-label="My goals"></a>
     <a href="#contact" class="dot" aria-label="Say hi"></a>
   </nav>
 
@@ -27,149 +24,12 @@
       <p class="eyebrow">welcome</p>
       <h1>Hi there, I'm Hope</h1>
       <p class="tagline">an artist and community organizer dedicated to building a more regenerative world</p>
-      <a href="#why" class="scroll-hint">
-        <span>get to know me</span>
+      <a href="#contact" class="scroll-hint">
+        <span>say hi</span>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </a>
     </div>
   </section>
-
-  <!-- WHY I MADE THIS SITE -->
-  <section id="why" class="why">
-    <div class="section-inner">
-      <p class="eyebrow">a little context</p>
-      <h2>Why I made this site</h2>
-      <p>First &amp; foremost:<br>
-      <strong class="accent">I want to create really meaningful friendships!</strong><br>
-      (and maybe find a partner along the way...)</p>
-
-      <p>I'm calling these <em class="accent-em">intentional friendships</em>: relationships that help each other become the best versions of ourselves, built on shared values, shared goals, and shared care.</p>
-
-      <figure class="inline-photo">
-        <img src="images/values.jpg" alt="Hope with friends" loading="lazy">
-      </figure>
-
-      <p>Don't get me wrong, I love a good time! Play, fun, and adventure are super important to me. But I am looking for the fun we have together to be in service of helping us grow:</p>
-
-      <ul class="questions">
-        <li>What can we create together?</li>
-        <li>How can we support each other's flourishing?</li>
-        <li>Who do we want to be, and how can we bring that out in one another?</li>
-        <li><span class="most">(and most importantly)</span><br>How can the things we do and make together help make the world a better place?</li>
-      </ul>
-
-      <p>And if somewhere along the way, one of those intentional friendships grows into a partnership, that's wonderful too ❤️</p>
-    </div>
-  </section>
-
-  <!-- ABOUT ME -->
-  <section id="about" class="about">
-    <div class="section-inner">
-      <div class="about-head">
-        <figure class="portrait">
-          <img src="images/portrait.jpg" alt="Hope smiling, curly hair, black top, deep blue background" loading="lazy">
-        </figure>
-        <div class="about-head-text">
-          <h2>About Me</h2>
-        </div>
-      </div>
-
-      <h3 class="sub">My Background</h3>
-      <p class="sub-note">at a glance</p>
-      <ul class="facts">
-        <li class="wide"><span class="fact-icon">🗽</span><span>Based in NYC</span></li>
-        <li class="wide"><span class="fact-icon">✊</span><span>Currently organize with <a class="inline-link" href="https://dearcrisis.com/" target="_blank" rel="noopener">DearCrisis NYC</a></span></li>
-        <li class="wide"><span class="fact-icon">🤲</span><span>Creator of <a class="inline-link" href="https://reciprocal-massage.web.app/" target="_blank" rel="noopener">Reciprocal Massage</a></span></li>
-        <li class="wide"><span class="fact-icon">🎓</span><span>BFA in Dance (Musical Theater &amp; Applied Physiology minor) – Southern Methodist University</span></li>
-        <li class="wide"><span class="fact-icon">🌱</span><span>Permaculture Design Program – <a class="inline-link" href="https://oaec.org/" target="_blank" rel="noopener">Occidental Arts &amp; Ecology Center</a></span></li>
-        <li class="wide"><span class="fact-icon">🧭</span><span>Experience Design Certificate Program – <a class="inline-link" href="https://www.odysseyworks.org/" target="_blank" rel="noopener">Odyssey Works</a></span></li>
-        <li><span class="fact-icon">🎭</span><span>Performing Artist</span></li>
-        <li><span class="fact-icon">✨</span><span>Experience Designer</span></li>
-        <li><span class="fact-icon">🗣️</span><span>Facilitator</span></li>
-        <li><span class="fact-icon">🧘</span><span>Somatic Practitioner</span></li>
-        <li><span class="fact-icon">🤝</span><span>Community Organizer</span></li>
-        <li class="half"><span class="fact-icon">🎬</span><span>Director</span></li>
-      </ul>
-
-      <div class="sides-head">
-        <div class="sides-head-text">
-          <h3 class="sub">My Work</h3>
-          <p class="sub-note">we all contain multitudes... here's a few of mine!</p>
-        </div>
-        <figure class="sides-photo">
-          <img src="images/sides-portrait.jpg" alt="Hope leaning against a brick wall in a blue tee, hand in her curls, smiling softly" loading="lazy">
-        </figure>
-      </div>
-      <div class="work-buttons">
-        <button class="work-btn" type="button" data-panel="work-performing"><span>Performing Arts</span></button>
-        <button class="work-btn" type="button" data-panel="work-climate"><span>Climate Activism</span></button>
-        <button class="work-btn" type="button" data-panel="work-community"><span>Community Organizing</span></button>
-        <button class="work-btn" type="button" data-panel="work-facilitator"><span>Facilitation &amp; Experience Design</span></button>
-      </div>
-
-      <dialog class="work-panel" id="work-performing" aria-labelledby="work-performing-title">
-        <div class="work-panel-inner">
-          <button class="work-close" type="button" aria-label="Close">&times;</button>
-          <div class="work-panel-head">
-            <span class="work-panel-icon">🎭</span>
-            <h3 id="work-performing-title">Performing Arts</h3>
-          </div>
-          <div class="work-text">
-            <p><a class="inline-link jump-link" href="#performing-resume">Jump to Resume</a></p>
-            <!-- Performing Arts: add more text here -->
-          </div>
-          <div class="work-resume" id="performing-resume">
-            <div class="work-resume-head">
-              <h4>Resume</h4>
-              <a class="inline-link" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
-            </div>
-            <a class="work-resume-preview" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener" aria-label="Open Hope's resume (PDF)">
-              <img src="images/resume-preview.jpg" alt="Preview of Hope Endrenyi's resume" loading="lazy" width="1530" height="1979">
-              <span class="work-resume-cta">View full resume (PDF)</span>
-            </a>
-          </div>
-        </div>
-      </dialog>
-
-      <dialog class="work-panel" id="work-climate" aria-labelledby="work-climate-title">
-        <div class="work-panel-inner">
-          <button class="work-close" type="button" aria-label="Close">&times;</button>
-          <div class="work-panel-head">
-            <span class="work-panel-icon">🌍</span>
-            <h3 id="work-climate-title">Climate Activism</h3>
-          </div>
-          <!-- Climate Activism: add text here -->
-          <div class="work-text"></div>
-        </div>
-      </dialog>
-
-      <dialog class="work-panel" id="work-community" aria-labelledby="work-community-title">
-        <div class="work-panel-inner">
-          <button class="work-close" type="button" aria-label="Close">&times;</button>
-          <div class="work-panel-head">
-            <span class="work-panel-icon">🏡</span>
-            <h3 id="work-community-title">Community Organizing</h3>
-          </div>
-          <!-- Community Organizing: add text here -->
-          <div class="work-text"></div>
-        </div>
-      </dialog>
-
-      <dialog class="work-panel" id="work-facilitator" aria-labelledby="work-facilitator-title">
-        <div class="work-panel-inner">
-          <button class="work-close" type="button" aria-label="Close">&times;</button>
-          <div class="work-panel-head">
-            <span class="work-panel-icon">🤲</span>
-            <h3 id="work-facilitator-title">Facilitation &amp; Experience Design</h3>
-          </div>
-          <!-- Facilitation & Experience Design: add text here -->
-          <div class="work-text"></div>
-        </div>
-      </dialog>
-
-  </section>
-
-  <!-- More sections will go here, built from Hope's doc -->
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
@@ -239,62 +99,7 @@
     }, { threshold: 0.5 });
     sections.forEach(s => s && observer.observe(s));
 
-    // Carousels: swipe (native scroll-snap) + arrow buttons + dots
-    document.querySelectorAll(".carousel").forEach(c => {
-      const track = c.querySelector(".carousel-track");
-      const slides = [...track.querySelectorAll(".carousel-slide")];
-      if (slides.length === 0) { c.style.display = "none"; return; }
-      if (slides.length === 1) return;
-      const prev = document.createElement("button"); prev.className = "carousel-btn prev"; prev.setAttribute("aria-label","Previous photo");
-      prev.innerHTML = "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15 18l-6-6 6-6\"/></svg>";
-      const next = prev.cloneNode(true); next.className = "carousel-btn next"; next.setAttribute("aria-label","Next photo");
-      next.innerHTML = "<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M9 18l6-6-6-6\"/></svg>";
-      const dots = document.createElement("div"); dots.className = "carousel-dots";
-      slides.forEach((_, i) => { const d = document.createElement("button"); d.setAttribute("aria-label","Photo " + (i+1)); d.addEventListener("click", () => go(i)); dots.appendChild(d); });
-      c.append(prev, next, dots);
-      const index = () => { const w = track.clientWidth; if (!w) return 0; return Math.max(0, Math.min(slides.length-1, Math.round(track.scrollLeft / w))); };
-      const go = i => track.scrollTo({ left: Math.max(0, Math.min(i, slides.length-1)) * track.clientWidth, behavior: "smooth" });
-      prev.addEventListener("click", () => go(index()-1));
-      next.addEventListener("click", () => go(index()+1));
-      const sync = () => {
-        const i = index();
-        if (c.classList.contains("activities")) { track.style.height = slides[i].offsetHeight + "px"; }
-        [...dots.children].forEach((d, j) => d.classList.toggle("is-active", j === i));
-        prev.disabled = i === 0; next.disabled = i === slides.length-1;
-      };
-      track.addEventListener("scroll", () => requestAnimationFrame(sync), { passive: true });
-      window.addEventListener("resize", sync);
-      window.addEventListener("load", sync);
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
-      if (window.ResizeObserver) { const ro = new ResizeObserver(() => sync()); slides.forEach(sl => ro.observe(sl)); }
-      sync();
-    });
-
     // Say hi form: send to Web3Forms without leaving the page
-
-    // My Work: buttons open pop-up panels
-    document.querySelectorAll('.work-btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var panel = document.getElementById(btn.dataset.panel);
-        if (!panel) return;
-        panel.showModal();
-        document.body.classList.add('panel-open');
-        requestAnimationFrame(function () { window.dispatchEvent(new Event('resize')); });
-      });
-    });
-    document.querySelectorAll('.work-panel .jump-link').forEach(function (link) {
-      link.addEventListener('click', function (e) {
-        var target = document.querySelector(link.getAttribute('href'));
-        if (!target) return;
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-    document.querySelectorAll('.work-panel').forEach(function (panel) {
-      panel.querySelector('.work-close').addEventListener('click', function () { panel.close(); });
-      panel.addEventListener('click', function (e) { if (e.target === panel) panel.close(); });
-      panel.addEventListener('close', function () { document.body.classList.remove('panel-open'); });
-    });
 
     (function () {
       var form = document.querySelector('form.say-hi');
