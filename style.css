@@ -192,6 +192,7 @@ a.hat { text-decoration: none; }
 .work-text:empty { display: none; }
 .performing { background: var(--blue-pale); }
 .climate { background: var(--cream); }
+.community { background: var(--blue-pale); }
 
 .work-facts {
   list-style: none;
