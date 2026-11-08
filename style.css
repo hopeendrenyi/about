@@ -185,6 +185,7 @@ section {
 /* ---------- Work sections (Performing Arts, ...) ---------- */
 a.hat { text-decoration: none; }
 .work-section { text-align: center; }
+.work-title { margin-bottom: 1.5rem; }
 .work-section .section-inner { max-width: var(--maxw); margin: 0 auto; }
 .work-section p { max-width: 52ch; margin-left: auto; margin-right: auto; font-size: 1rem; line-height: 1.6; }
 .work-text:empty { display: none; }
