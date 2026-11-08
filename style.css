@@ -115,6 +115,22 @@ section {
   color: var(--mauve-deep);
   padding: 0 0.35em 0 0.08em;
 }
+.about p.hand-note {
+  font-family: var(--hand);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: var(--mauve-deep);
+  max-width: 30ch;
+  margin-top: 1.75rem;
+}
+.hand-note a {
+  color: var(--mauve-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--mauve);
+  text-underline-offset: 4px;
+}
+.hand-note a:hover { color: var(--ink); }
+
 .hats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
