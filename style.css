@@ -190,6 +190,22 @@ a.hat { text-decoration: none; }
 .work-text:empty { display: none; }
 .performing { background: var(--blue-pale); }
 
+.work-facts {
+  list-style: none;
+  margin: 0 auto 1.25rem;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.work-facts > li { margin: 0 0 0.35rem; }
+.credits {
+  list-style: none;
+  margin: 0.35rem auto 0.5rem;
+  padding: 0;
+}
+.credits li { margin: 0; }
+.credits .role { font-weight: 600; }
+.credits em { font-family: var(--serif); font-style: italic; }
 .resume { margin-top: 2rem; }
 .resume-title {
   font-family: var(--serif);
@@ -226,6 +242,121 @@ a.hat { text-decoration: none; }
   font-size: 0.98rem;
   white-space: nowrap;
   box-shadow: 0 6px 18px rgba(60, 69, 64, 0.25);
+}
+
+/* ---------- Photo carousel (swipe or use arrows) ---------- */
+.carousel {
+  position: relative;
+  margin: 1.5rem 0 0.5rem;
+}
+.carousel:empty { display: none; }
+.carousel-track {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-radius: 18px;
+  padding-bottom: 2px;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid var(--cream-deep);
+}
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  background: var(--cream-deep);
+}
+.carousel-slide figcaption {
+  font-family: var(--hand);
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--mauve-deep);
+  padding: 0.75rem 1rem 0.9rem;
+}
+.carousel-btn {
+  position: absolute;
+  top: 190px;              /* vertical middle of the image area */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  box-shadow: 0 4px 14px rgba(60, 69, 64, 0.18);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s, opacity 0.2s;
+}
+.carousel-btn:hover { background: var(--mauve-pale); }
+.carousel-btn.prev { left: 0.6rem; }
+.carousel-btn.next { right: 0.6rem; }
+.carousel-btn[disabled] { opacity: 0.35; cursor: default; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.carousel-dots button.is-active { opacity: 1; background: var(--mauve); transform: scale(1.3); }
+@media (max-width: 480px) {
+  .carousel-slide img { height: 300px; }
+  .carousel-btn { top: 150px; width: 36px; height: 36px; }
+}
+
+/* Show whole photos in the carousel (no cropping), on a soft cream backdrop */
+.carousel-slide img { height: 460px; object-fit: contain; background: var(--cream-deep); }
+.carousel-btn { top: 230px; }
+@media (max-width: 480px) {
+  .carousel-slide img { height: 380px; }
+  .carousel-btn { top: 190px; }
+}
+
+/* ---------- Work section layout: carousel beside text ---------- */
+.performing .section-inner { max-width: 1040px; }
+.work-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+  text-align: center;
+}
+.work-layout > * { min-width: 0; max-width: 100%; }
+.work-layout .carousel { margin: 0; }
+.work-layout .carousel-slide img { height: 420px; }
+.work-layout .carousel-btn { top: 210px; }
+.work-layout .work-text p { margin-left: auto; margin-right: auto; }
+.resume { max-width: var(--maxw); margin: 2.75rem auto 0; }
+@media (max-width: 760px) {
+  .work-layout { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+  .work-layout .carousel { max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 480px) {
+  .work-layout .carousel-slide img { height: 380px; }
+  .work-layout .carousel-btn { top: 190px; }
 }
 
 /* ---------- Contact ---------- */
