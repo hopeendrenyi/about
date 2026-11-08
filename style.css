@@ -131,6 +131,21 @@ section {
 }
 .hand-note a:hover { color: var(--ink); }
 
+.about-photo {
+  margin: 1.75rem auto 2rem;
+  max-width: 340px;
+}
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 18px 40px rgba(60, 69, 64, 0.16);
+}
+@media (max-width: 480px) {
+  .about-photo { max-width: 280px; }
+}
+
 .hats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
