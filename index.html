@@ -101,18 +101,18 @@
               </ul>
             </li>
           </ul>
-          <p>Currently exploring the intersection of immersive theater and community organizing</p>
+          <p class="resume-link-wrap"><a class="inline-link resume-link" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener">see full resume</a></p>
+          <p class="hand-note">Currently exploring the intersection of immersive theater and community organizing</p>
         </div>
       </div>
 
-      <div class="resume">
-        <h3 class="resume-title">Resume</h3>
-        <a class="resume-preview" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener" aria-label="Open Hope's resume (PDF)">
-          <img src="images/resume-preview.jpg" alt="Preview of Hope Endrenyi's resume" loading="lazy" width="1530" height="1979">
-          <span class="resume-cta">View full resume (PDF)</span>
-        </a>
-      </div>
-
+      <dialog class="resume-dialog" id="resume-dialog" aria-label="Hope's resume">
+        <div class="resume-dialog-inner">
+          <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+          <p class="resume-dialog-bar"><a class="inline-link" href="files/Hope-Endrenyi-Resume.pdf" target="_blank" rel="noopener">Open PDF in a new tab</a></p>
+          <img src="images/resume-preview.jpg" alt="Hope Endrenyi's resume" loading="lazy" width="1530" height="1979">
+        </div>
+      </dialog>
     </div>
   </section>
 
@@ -214,6 +214,22 @@
       if (window.ResizeObserver) { const ro = new ResizeObserver(() => sync()); slides.forEach(sl => ro.observe(sl)); }
       sync();
     });
+
+    // Resume pop-up (falls back to opening the PDF if <dialog> is unsupported)
+    (function () {
+      var dialog = document.getElementById('resume-dialog');
+      if (!dialog || typeof dialog.showModal !== 'function') return;
+      document.querySelectorAll('.resume-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          dialog.showModal();
+          document.body.classList.add('panel-open');
+        });
+      });
+      dialog.querySelector('.dialog-close').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', function () { document.body.classList.remove('panel-open'); });
+    })();
 
     // Say hi form: send to Web3Forms without leaving the page
 
