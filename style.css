@@ -347,6 +347,9 @@ a.hat { text-decoration: none; }
 }
 .work-layout > * { min-width: 0; max-width: 100%; }
 .work-layout .carousel { margin: 0; }
+.work-layout .carousel-track { border-radius: 0; }
+.work-layout .carousel-slide { background: transparent; border: 0; border-radius: 18px; }
+.work-layout .carousel-slide img { background: transparent; }
 .work-layout .carousel-slide img { height: 420px; }
 .work-layout .carousel-btn { top: 210px; }
 .work-layout .work-text p { margin-left: auto; margin-right: auto; }
