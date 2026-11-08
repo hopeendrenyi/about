@@ -191,6 +191,7 @@ a.hat { text-decoration: none; }
 .work-section p { max-width: 52ch; margin-left: auto; margin-right: auto; font-size: 1rem; line-height: 1.6; }
 .work-text:empty { display: none; }
 .performing { background: var(--blue-pale); }
+.climate { background: var(--cream); }
 
 .work-facts {
   list-style: none;
@@ -390,7 +391,7 @@ body.panel-open { overflow: hidden; }
 }
 
 /* ---------- Work section layout: carousel beside text ---------- */
-.performing .section-inner { max-width: 1040px; }
+.work-section .section-inner { max-width: 1040px; }
 .work-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
