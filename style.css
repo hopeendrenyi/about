@@ -192,6 +192,7 @@ a.hat { text-decoration: none; }
 .work-text:empty { display: none; }
 .performing { background: var(--blue-pale); }
 .climate { background: var(--cream); }
+.facilitation { background: var(--cream); }
 .community { background: var(--blue-pale); }
 
 .work-facts {
@@ -202,7 +203,8 @@ a.hat { text-decoration: none; }
   line-height: 1.6;
 }
 .work-facts > li { margin: 0 0 0.35rem; }
-.community .work-facts > li { margin-bottom: 1.1rem; }
+.community .work-facts > li,
+.facilitation .work-facts > li { margin-bottom: 1.1rem; }
 .credits {
   list-style: none;
   margin: 0.35rem auto 0.5rem;
