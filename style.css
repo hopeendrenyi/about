@@ -413,6 +413,19 @@ body.panel-open { overflow: hidden; }
 .work-layout .carousel-slide img { background: transparent; }
 .work-layout .carousel-slide img { height: 420px; }
 .work-layout .carousel-btn { top: 210px; }
+/* Landscape-heavy carousels: photos hug the top so they sit close to the title */
+.climate .work-layout .carousel-slide img,
+.community .work-layout .carousel-slide img { height: 360px; object-position: center top; }
+.climate .work-layout .carousel-btn,
+.community .work-layout .carousel-btn { top: 160px; }
+.climate .work-layout,
+.community .work-layout { align-items: start; }
+@media (max-width: 480px) {
+  .climate .work-layout .carousel-slide img,
+  .community .work-layout .carousel-slide img { height: 300px; }
+  .climate .work-layout .carousel-btn,
+  .community .work-layout .carousel-btn { top: 140px; }
+}
 .work-layout .work-text p { margin-left: auto; margin-right: auto; }
 @media (max-width: 760px) {
   .work-layout { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
