@@ -295,11 +295,10 @@
         <fieldset class="field choice-group">
           <legend>How can I reach you back?</legend>
           <div class="pills">
-            <label class="pill"><input type="radio" name="reach_me_via" value="WhatsApp" checked><span>WhatsApp <small>(my preference)</small></span></label>
             <label class="pill"><input type="radio" name="reach_me_via" value="Phone"><span>Phone</span></label>
-            <label class="pill"><input type="radio" name="reach_me_via" value="Email"><span>Email</span></label>
+            <label class="pill"><input type="radio" name="reach_me_via" value="Email" checked><span>Email</span></label>
           </div>
-          <input id="sh-contact" type="text" name="contact" required placeholder="your WhatsApp number" aria-label="Your contact details">
+          <input id="sh-contact" type="text" name="contact" required placeholder="your email address" aria-label="Your contact details">
         </fieldset>
 
         <div class="field">
@@ -412,7 +411,7 @@
 
       // Placeholder follows the chosen way to reach back
       var contactInput = form.querySelector('#sh-contact');
-      var hints = { WhatsApp: 'your WhatsApp number', Phone: 'your phone number', Email: 'your email address' };
+      var hints = { Phone: 'your phone number', Email: 'your email address' };
       form.querySelectorAll('input[name="reach_me_via"]').forEach(function (r) {
         r.addEventListener('change', function () { contactInput.placeholder = hints[r.value] || ''; });
       });
