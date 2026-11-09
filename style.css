@@ -192,6 +192,7 @@ a.hat { text-decoration: none; }
 .work-text:empty { display: none; }
 .performing { background: var(--blue-pale); }
 .climate { background: var(--cream); }
+.experience { background: var(--blue-pale); }
 .facilitation { background: var(--cream); }
 .community { background: var(--blue-pale); }
 
@@ -204,7 +205,8 @@ a.hat { text-decoration: none; }
 }
 .work-facts > li { margin: 0 0 0.35rem; }
 .community .work-facts > li,
-.facilitation .work-facts > li { margin-bottom: 1.1rem; }
+.facilitation .work-facts > li,
+.experience .work-facts > li { margin-bottom: 1.1rem; }
 .credits {
   list-style: none;
   margin: 0.35rem auto 0.5rem;
@@ -405,6 +407,7 @@ body.panel-open { overflow: hidden; }
 }
 .work-layout > * { min-width: 0; max-width: 100%; }
 .work-layout .carousel { margin: 0; }
+.work-layout-solo { grid-template-columns: minmax(0, 1fr); max-width: var(--maxw); margin: 0 auto; }
 .work-layout .carousel-track { border-radius: 0; }
 .work-layout .carousel-slide { background: transparent; border: 0; border-radius: 18px; }
 .work-layout .carousel-slide img { background: transparent; }
